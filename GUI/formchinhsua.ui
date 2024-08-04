@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormChinhSua</class>
+ <widget class="QWidget" name="FormChinhSua">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>921</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>921</width>
+    <height>642</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>921</width>
+    <height>642</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Chỉnh sửa bộ đề</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/img/icon/edit.ico</normaloff>:/img/icon/edit.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#FormChinhSua{
+background-color: rgb(255, 255, 255);
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ffffff;&quot;&gt;ID bộ đề:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>10</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ffffff;&quot;&gt;Mật khẩu sửa:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtPass">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>30</y>
+     <width>113</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCheck">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>30</y>
+     <width>61</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>-20</x>
+     <y>0</y>
+     <width>1161</width>
+     <height>75</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(85, 170, 255, 255), stop:1 rgba(62, 126, 189, 255));</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>84</y>
+     <width>891</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTabWidget" name="tabMain">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>110</y>
+      <width>881</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget#tabMain{
+background-color: rgb(252, 252, 252);
+}</string>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Sửa, xóa câu hỏi</string>
+     </attribute>
+     <widget class="QRadioButton" name="optD">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="optC">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>230</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSTT">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>63</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="optA">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>130</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>51</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Câu số:</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="optB">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDelete">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>344</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string> Xóa</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/img/icon/delete.png</normaloff>:/img/icon/delete.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnWrite">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>344</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Ghi</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/img/icon/check.png</normaloff>:/img/icon/check.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnNext">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>344</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Câu sau</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/img/icon/next.png</normaloff>:/img/icon/next.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnPre">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>344</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Câu trước</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/img/icon/previous.png</normaloff>:/img/icon/previous.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>336</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Điểm cho câu:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>336</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tag (cách bởi &quot;,&quot;):</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtTags">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>356</y>
+        <width>113</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtScore">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>356</y>
+        <width>113</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtCauHoi">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>841</width>
+        <height>81</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtA">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>130</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtB">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>180</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtC">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>230</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtD">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>280</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Bổ sung câu hỏi</string>
+     </attribute>
+     <widget class="QRadioButton" name="optA_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>130</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="optB_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="optD_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="optC_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>230</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnWrite_2">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>344</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Ghi</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/img/icon/check.png</normaloff>:/img/icon/check.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>101</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nhập câu hỏi:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>336</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tag (cách bởi &quot;,&quot;):</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>336</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Điểm cho câu:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtTags_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>356</y>
+        <width>113</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtScore_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>356</y>
+        <width>113</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtB_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>180</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtD_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>280</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtA_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>130</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtCauHoi_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>841</width>
+        <height>81</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtC_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>230</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="txtName">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtPassExam">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>0</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thời gian:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinTime">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>20</y>
+      <width>111</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>1000</number>
+    </property>
+    <property name="singleStep">
+     <number>15</number>
+    </property>
+    <property name="value">
+     <number>60</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>0</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Mật khẩu thi:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tên bộ đề:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>50</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Mật khẩu sửa:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtPassEdit">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>70</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtAuthor">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>70</y>
+      <width>171</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tác giả:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>10</y>
+      <width>191</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>84</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QRadioButton" name="optAll">
+        <property name="text">
+         <string>Tất cả</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="optCustom">
+        <property name="text">
+         <string>Tùy chỉnh</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>10</y>
+      <width>201</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>174</width>
+       <height>74</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="chkSTT">
+        <property name="text">
+         <string>Xuất bản</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="chkShowAnswer">
+        <property name="text">
+         <string>Xem đáp án khi làm xong</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="chkRank">
+        <property name="text">
+         <string>Xếp hạng khi làm xong</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>0</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tùy chọn:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>0</y>
+      <width>161</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Số câu cho thí sinh làm:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="btnExit">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>10</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Thoát</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/img/icon/quit.png</normaloff>:/img/icon/quit.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSave">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>10</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Lưu lại</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/img/icon/save.png</normaloff>:/img/icon/save.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtID">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>113</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <zorder>label_8</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>txtPass</zorder>
+  <zorder>btnCheck</zorder>
+  <zorder>frame</zorder>
+  <zorder>btnExit</zorder>
+  <zorder>btnSave</zorder>
+  <zorder>txtID</zorder>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

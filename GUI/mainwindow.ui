@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>852</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>852</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>852</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="font">
+   <font/>
+  </property>
+  <property name="windowTitle">
+   <string>Phần mềm ôn tập và thi trắc nghiệm</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/img/icon/icon.ico</normaloff>:/img/icon/icon.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#centralwidget {
+background-color: rgb(255, 255, 255);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btnLamBai">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string> Làm bài</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/img/icon/exam.ico</normaloff>:/img/icon/exam.ico</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnTaoMoi">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string> Tạo mới</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/img/icon/new.ico</normaloff>:/img/icon/new.ico</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnNhatKy">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string> Nhật ký</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/img/icon/report.ico</normaloff>:/img/icon/report.ico</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGioiThieu">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>260</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string> Giới thiệu</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/img/icon/info.ico</normaloff>:/img/icon/info.ico</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnThoat">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>480</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> Thoát</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/img/icon/quit.png</normaloff>:/img/icon/quit.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnChinhSua">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string> Chỉnh sửa</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/img/icon/edit.ico</normaloff>:/img/icon/edit.ico</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>0</y>
+      <width>181</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(85, 170, 255, 255), stop:1 rgba(62, 126, 189, 255));</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QFrame" name="fmAbout">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>661</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>71</width>
+       <height>78</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources.qrc">:/img/icon/logo.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>180</y>
+       <width>631</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Các tác giả:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>230</y>
+       <width>140</width>
+       <height>188</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources.qrc">:/img/icon/nham.jpg</pixmap>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>430</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;HUỲNH ĐỨC NHÂM&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>581</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Phần mềm hỗ trợ các tính năng:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Tạo mới bộ đề, chỉnh sửa, xóa câu hỏi trong bộ đề. Làm trắc nghiệm có đếm giờ và không đếm giờ, làm bài trắc nghiệm theo nhãn cho trước, ...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>430</y>
+       <width>181</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;NGUYỄN PHẠM NHẬT HUY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>60</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>v1.0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>430</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;NGUYỄN HOÀNG HUY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>230</y>
+       <width>140</width>
+       <height>188</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources.qrc">:/img/icon/nhuy.jpg</pixmap>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>641</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>230</y>
+       <width>140</width>
+       <height>188</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources.qrc">:/img/icon/hhuy.jpg</pixmap>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>10</y>
+       <width>261</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Ôn tập và thi trắc nghiệm</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>460</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nhóm trưởng&lt;br/&gt;&lt;/span&gt;Xử lý nghiệp vụ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>460</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thành viên&lt;br/&gt;&lt;/span&gt;Xử lý nghiệp vụ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>460</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thành viên&lt;br/&gt;&lt;/span&gt;Xử lý tương tác người dùng&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="fmLB">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>661</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="txtUserID">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>50</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ID bộ đề:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>7</y>
+       <width>111</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nhập họ tên:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtID">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>120</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtName">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>10</y>
+       <width>209</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtPass">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>160</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtTag">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>230</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>111</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nhập mã thí sinh:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tag (cách bới &quot;,&quot;):</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mật khẩu:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnVaoThi">
+     <property name="geometry">
+      <rect>
+       <x>532</x>
+       <y>10</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;</string>
+     </property>
+     <property name="text">
+      <string> Vào thi</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/img/icon/Arrow-Right.ico</normaloff>:/img/icon/Arrow-Right.ico</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="back">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>310</y>
+      <width>256</width>
+      <height>256</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/img/icon/back.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QFrame" name="fmNhatKy">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>661</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTableWidget" name="tbReport">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>641</width>
+       <height>461</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>71</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ID bài thi:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtIDReport">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>10</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtPassReport">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>10</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>10</y>
+       <width>71</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mật khẩu:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnOK">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>10</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+    </widget>
+   </widget>
+   <zorder>back</zorder>
+   <zorder>label_2</zorder>
+   <zorder>btnLamBai</zorder>
+   <zorder>btnTaoMoi</zorder>
+   <zorder>btnNhatKy</zorder>
+   <zorder>btnGioiThieu</zorder>
+   <zorder>btnThoat</zorder>
+   <zorder>btnChinhSua</zorder>
+   <zorder>fmAbout</zorder>
+   <zorder>fmLB</zorder>
+   <zorder>fmNhatKy</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

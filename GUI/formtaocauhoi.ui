@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormTaoCauHoi</class>
+ <widget class="QWidget" name="FormTaoCauHoi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>881</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>881</width>
+    <height>642</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>881</width>
+    <height>642</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Tạo bộ đề</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/img/icon/new.ico</normaloff>:/img/icon/new.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#FormTaoCauHoi{
+background-color: rgb(255, 255, 255);
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Mật khẩu thi:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtPass">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>113</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtPassEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>113</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtExamName">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>30</y>
+     <width>141</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinTime">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>30</y>
+     <width>111</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
+   <property name="singleStep">
+    <number>15</number>
+   </property>
+   <property name="value">
+    <number>60</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1141</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(85, 170, 255, 255), stop:1 rgba(62, 126, 189, 255));</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Mật khẩu sửa:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>10</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Tên bộ đề:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>10</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Thời gian (p):</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtAuthor">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>80</y>
+     <width>141</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>60</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Tác giả:</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>841</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Thêm câu hỏi</string>
+    </attribute>
+    <widget class="QLineEdit" name="txtScore">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>354</y>
+       <width>131</width>
+       <height>26</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="optC">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtC">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>230</y>
+       <width>771</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnWrite">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>340</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string> Ghi</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/img/icon/check.png</normaloff>:/img/icon/check.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="optD">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>280</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtD">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>280</y>
+       <width>771</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtTags">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>354</y>
+       <width>131</width>
+       <height>26</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="optA">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtA">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>130</y>
+       <width>771</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtB">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>180</y>
+       <width>771</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>330</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tag (cách bởi &quot;,&quot;):</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="optB">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>180</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>330</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Điểm cho câu:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtCauHoi">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>801</width>
+       <height>81</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblCount">
+     <property name="geometry">
+      <rect>
+       <x>111</x>
+       <y>11</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>21</x>
+       <y>11</y>
+       <width>84</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Số câu đã tạo:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Xem lại</string>
+    </attribute>
+    <widget class="QLabel" name="lblIDQ">
+     <property name="geometry">
+      <rect>
+       <x>77</x>
+       <y>11</y>
+       <width>21</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>21</x>
+       <y>11</y>
+       <width>50</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Câu thứ:</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="optA_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="optC_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>330</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tag (cách bởi &quot;,&quot;):</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtCauHoi_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>801</width>
+       <height>81</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnWrite_2">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>340</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string> Ghi</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/img/icon/check.png</normaloff>:/img/icon/check.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtTags_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>354</y>
+       <width>131</width>
+       <height>26</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtD_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>280</y>
+       <width>771</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtA_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>130</y>
+       <width>771</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="optB_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>180</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtB_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>180</y>
+       <width>771</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="optD_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>280</y>
+       <width>21</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtScore_2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>354</y>
+       <width>131</width>
+       <height>26</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>330</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Điểm cho câu:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtC_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>230</y>
+       <width>771</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnPre">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>340</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string> Câu trước</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/img/icon/previous.png</normaloff>:/img/icon/previous.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnNext">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>340</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string> Câu sau</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/img/icon/next.png</normaloff>:/img/icon/next.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnDelete">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>340</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string> Xóa</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/img/icon/delete.png</normaloff>:/img/icon/delete.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>10</y>
+     <width>201</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="title">
+    <string>Số câu cho thí sinh làm:</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>84</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QRadioButton" name="optAll">
+       <property name="text">
+        <string>Tất cả</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="optCustom">
+       <property name="text">
+        <string>Tùy chỉnh</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>10</y>
+     <width>201</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="title">
+    <string>Tùy chọn:</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>167</width>
+      <height>74</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QCheckBox" name="chkShowAnswer">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Xem đáp án khi thi xong</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="chkRank">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Xếp hạng khi thi xong</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="chkPublic">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Xuất bản</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>580</y>
+     <width>841</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="btnSave">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="text">
+       <string> LƯU LẠI</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/img/icon/save.png</normaloff>:/img/icon/save.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnExit">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="text">
+       <string> THOÁT</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/img/icon/quit.png</normaloff>:/img/icon/quit.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>label_8</zorder>
+  <zorder>label</zorder>
+  <zorder>txtPass</zorder>
+  <zorder>txtPassEdit</zorder>
+  <zorder>txtExamName</zorder>
+  <zorder>spinTime</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>txtAuthor</zorder>
+  <zorder>label_5</zorder>
+  <zorder>tabWidget</zorder>
+  <zorder>lblCount</zorder>
+  <zorder>label_9</zorder>
+  <zorder>btnExit</zorder>
+  <zorder>btnSave</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>groupBox_2</zorder>
+  <zorder>btnSave</zorder>
+  <zorder>btnExit</zorder>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

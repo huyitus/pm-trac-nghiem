@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>icon/save.png</file>
+        <file>icon/check.png</file>
+        <file>icon/delete.png</file>
+        <file>icon/next.png</file>
+        <file>icon/previous.png</file>
+        <file>icon/submit.png</file>
+        <file>icon/quit.png</file>
+        <file>icon/edit.ico</file>
+        <file>icon/new.ico</file>
+        <file>icon/exam.ico</file>
+        <file>icon/report.ico</file>
+        <file>icon/info.ico</file>
+        <file>icon/icon.ico</file>
+        <file>icon/Share.ico</file>
+        <file>icon/logo.png</file>
+        <file>icon/hhuy.jpg</file>
+        <file>icon/nham.jpg</file>
+        <file>icon/nhuy.jpg</file>
+        <file>icon/Arrow-Right.ico</file>
+        <file>icon/back.jpg</file>
+    </qresource>
+</RCC>
